@@ -1,0 +1,115 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  transition: visibility 450ms, opacity 450ms;
+}
+.modal:has(.cctv) {
+  z-index: 101;
+}
+.modal .modal__footer button {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition: all 250ms ease-in-out, visibility 0ms;
+}
+.modal .modal__footer button:nth-child(1) {
+  transition-delay: 0ms;
+}
+.modal .modal__footer button:nth-child(2) {
+  transition-delay: 150ms;
+}
+.modal .modal__footer button:nth-child(3) {
+  transition-delay: 250ms;
+}
+.modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0ms 350ms, opacity 350ms;
+}
+.modal.hidden .modal__footer button {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(80px);
+  transition: visibility 0ms 550ms;
+}
+.modal__content {
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  transform: translateX(-50%);
+}
+.modal__frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 250ms;
+}
+.modal__frame.ani {
+  opacity: 1;
+  transition: opacity 350ms 250ms ease-in-out;
+}
+.modal__frame--tour {
+  width: 3840px;
+  height: 1796px;
+  margin-bottom: 44px;
+}
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  gap: 0 58px;
+}
+.modal .cctv {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212637;
+}
+.modal .cctv__in {
+  width: 100%;
+  height: 100%;
+}
+.modal .cctv__in.nothing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.modal .cctv__in.nothing i {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+.modal .cctv__in.nothing p {
+  font-size: 64px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.modal .cctv button {
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=modal.css.map */
