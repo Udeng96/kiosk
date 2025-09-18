@@ -86,7 +86,15 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    background-color: #212637;
+    //background-color: #212637;
+    &__title{
+      position: absolute;
+      top: 144px;
+      left: 800px;
+      font-family: "MuseumClassic";
+      font-size: 110px;
+      color: #FFF;
+    }
 
     &__in {
       width: 100%;

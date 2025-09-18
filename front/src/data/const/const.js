@@ -179,75 +179,76 @@ export const TOUR_MODAL_NONE = {
     img: "",
     title: "없음",
     area: "NONE",
+    mgtno: ''
 }
 
 export const TOUR_MODAL_LIST = [
 
     // 설천면
     [
-        {index: 27, img: TOUR27, title: "남해각", area: "설천면"},
-        {index: 28, img: TOUR28, title: "노량거북선", area: "설천면"},
-        {index: 29, img: TOUR29, title: "충렬사 관광안내소", area: "설천면"},
+        {index: 27, img: TOUR27, title: "남해각", area: "설천면", mgtno : ''},
+        {index: 28, img: TOUR28, title: "노량거북선", area: "설천면", mgtno : ''},
+        {index: 29, img: TOUR29, title: "충렬사 관광안내소", area: "설천면", mgtno: ''},
     ],
 // 고현면
     [
-        {index: 26, img: TOUR26, title: "이순신바다공원", area: "고현면"},
+        {index: 26, img: TOUR26, title: "이순신바다공원", area: "고현면", mgtno: '102072'},
     ],
 // 서면
     [
-        {index: 24, img: TOUR24, title: "남해스포츠파크", area: "서면"},
-        {index: 25, img: TOUR25, title: "장항숲", area: "서면"},
+        {index: 24, img: TOUR24, title: "남해스포츠파크", area: "서면", mgtno: ''},
+        {index: 25, img: TOUR25, title: "장항숲", area: "서면", mgtno: ''},
     ],
 // 남해읍
     [
-        {index: 1, img: TOUR1, title: "남해유배문학관", area: "남해읍"},
+        {index: 1, img: TOUR1, title: "남해유배문학관", area: "남해읍", mgtno: ''},
     ],
 // 남면
     [
-        {index: 19, img: TOUR19, title: "다랭이 마을", area: "남면"},
-        {index: 20, img: TOUR20, title: "두곡월포해수욕장", area: "남면"},
-        {index: 21, img: TOUR21, title: "사촌해수욕장", area: "남면"},
-        {index: 22, img: TOUR22, title: "아난티남해", area: "남면"},
-        {index: 23, img: TOUR23, title: "섬이정원", area: "남면"},
+        {index: 19, img: TOUR19, title: "다랭이 마을", area: "남면", mgtno: '102074'},
+        {index: 20, img: TOUR20, title: "두곡월포해수욕장", area: "남면", mgtno: ''},
+        {index: 21, img: TOUR21, title: "사촌해수욕장", area: "남면", mgtno: ''},
+        {index: 22, img: TOUR22, title: "아난티남해", area: "남면", mgtno: ''},
+        {index: 23, img: TOUR23, title: "섬이정원", area: "남면", mgtno: ''},
     ],
 // 이동면
     [
-        {index: 2, img: TOUR2, title: "앵강다숲", area: "이동면"},
-        {index: 3, img: TOUR3, title: "남해탈공연박물관", area: "이동면"},
+        {index: 2, img: TOUR2, title: "앵강다숲", area: "이동면", mgtno: ''},
+        {index: 3, img: TOUR3, title: "남해탈공연박물관", area: "이동면", mgtno: ''},
     ],
 // 창선면
     [
-        {index: 30, img: TOUR30, title: "토피아랜드 테마정원", area: "창선면"},
-        {index: 31, img: TOUR31, title: "사우스케이프", area: "창선면"},
-        {index: 32, img: TOUR32, title: "뮤지엄 남해", area: "창선면"},
-        {index: 33, img: TOUR33, title: "라키비움", area: "창선면"},
-        {index: 34, img: TOUR34, title: "별해로", area: "창선면"},
-        {index: 35, img: TOUR35, title: "동대만 간이역", area: "창선면"},
-        {index: 36, img: TOUR36, title: "단항 회센터", area: "창선면"},
+        {index: 30, img: TOUR30, title: "토피아랜드 테마정원", area: "창선면", mgtno: ''},
+        {index: 31, img: TOUR31, title: "사우스케이프", area: "창선면", mgtno: ''},
+        {index: 32, img: TOUR32, title: "뮤지엄 남해", area: "창선면", mgtno: ''},
+        {index: 33, img: TOUR33, title: "라키비움", area: "창선면", mgtno: ''},
+        {index: 34, img: TOUR34, title: "별해로", area: "창선면", mgtno: '102082'},
+        {index: 35, img: TOUR35, title: "동대만 간이역", area: "창선면", mgtno: ''},
+        {index: 36, img: TOUR36, title: "단항 회센터", area: "창선면", mgtno: ''},
     ],
 // 삼동면
     [
-        {index: 7, img: TOUR7, title: "독일마을", area: "삼동면"},
-        {index: 8, img: TOUR8, title: "남해편백자연휴양림", area: "삼동면"},
-        {index: 9, img: TOUR9, title: "힐링숲타운", area: "삼동면"},
-        {index: 10, img: TOUR10, title: "물미해안전망대", area: "삼동면"},
-        {index: 11, img: TOUR11, title: "물건방조어부림", area: "삼동면"},
-        {index: 12, img: TOUR12, title: "남해군 요트학교", area: "삼동면"},
+        {index: 7, img: TOUR7, title: "독일마을", area: "삼동면", mgtno: '102080'},
+        {index: 8, img: TOUR8, title: "남해편백자연휴양림", area: "삼동면", mgtno: ''},
+        {index: 9, img: TOUR9, title: "힐링숲타운", area: "삼동면", mgtno: ''},
+        {index: 10, img: TOUR10, title: "물미해안전망대", area: "삼동면", mgtno: ''},
+        {index: 11, img: TOUR11, title: "물건방조어부림", area: "삼동면", mgtno: ''},
+        {index: 12, img: TOUR12, title: "남해군 요트학교", area: "삼동면", mgtno: ''},
     ],
 // 상주면
     [
-        {index: 4, img: TOUR4, title: "상주은모래비치", area: "상주면"},
-        {index: 5, img: TOUR5, title: "금산", area: "상주면"},
-        {index: 6, img: TOUR6, title: "노도", area: "상주면"},
+        {index: 4, img: TOUR4, title: "상주은모래비치", area: "상주면", mgtno: '102077'},// 확인해봐야함
+        {index: 5, img: TOUR5, title: "금산", area: "상주면", mgtno: '102076'},
+        {index: 6, img: TOUR6, title: "노도", area: "상주면", mgtno: ''},
     ],
 // 미조면
     [
-        {index: 13, img: TOUR13, title: "설리해수욕장", area: "미조면"},
-        {index: 14, img: TOUR14, title: "조도", area: "미조면"},
-        {index: 15, img: TOUR15, title: "미조북항", area: "미조면"},
-        {index: 16, img: TOUR16, title: "설리스카이워크", area: "미조면"},
-        {index: 17, img: TOUR17, title: "스페이스 미조", area: "미조면"},
-        {index: 18, img: TOUR18, title: "송정솔바람해변", area: "미조면"}
+        {index: 13, img: TOUR13, title: "설리해수욕장", area: "미조면", mgtno: ''},
+        {index: 14, img: TOUR14, title: "조도", area: "미조면", mgtno: ''},
+        {index: 15, img: TOUR15, title: "미조북항", area: "미조면", mgtno: ''},
+        {index: 16, img: TOUR16, title: "설리스카이워크", area: "미조면", mgtno: '102079'},
+        {index: 17, img: TOUR17, title: "스페이스 미조", area: "미조면", mgtno: ''},
+        {index: 18, img: TOUR18, title: "송정솔바람해변", area: "미조면", mgtno: '102078'}// 맞는지 확인해봐야함
     ]
 ];
 
@@ -273,8 +274,8 @@ export const NAMHAE__CREATE_AREA = {
     GH: {cd: "GOHYEON", nm: "고현면", img: GOHYEON_IMG, map: GOHYEON_MAP, tourList: TOUR_MODAL_LIST[1]},
     SM: {cd: "SEOMYEON", nm: "서면", img: SEOMYEON_IMG, map: SEOMYEON_MAP, tourList: TOUR_MODAL_LIST[2]},
     NH: {cd: "MAMHAE", nm: "남해읍", img: NAMHAE_IMG, map: NAMHAE_MAP, tourList: [
-            {index: 1, img: TOUR1, title: "남해유배문학관", area: "남해읍"},
-            {index: 37, img: TOUR1, title: "창생플랫폼", area: "남해읍"},
+            {index: 1, img: TOUR1, title: "남해유배문학관", area: "남해읍", mgtno: ''},
+            {index: 37, img: TOUR36, title: "창생플랫폼", area: "남해읍", mgtno: ''},
         ]},
     NM: {cd: "NAMMYEON", nm: "남면", img: NAMMYEON_IMG, map: NAMMYEON_MAP, tourList: TOUR_MODAL_LIST[4]},
     ID: {cd: "IDONG", nm: "이동면", img: IDONG_IMG, map: IDONG_MAP, tourList: TOUR_MODAL_LIST[5]},
@@ -373,10 +374,14 @@ export const NAMHAE_BARAE_THREE_LIST = [
 ]
 
 export const IFRAME_URL = {
-    TOUR: "https://namhae.tourplatform.co.kr/",
+    TOUR:  "https://namhae.to`urplatform.co.kr/",
+    // TOUR:  "http://172.16.8.20/tour",
     NAMHAERO: "https://namhaeon.com/namhaeroOn/main",
+    // NAMHAERO: "http://172.16.8.20/namhaero",
     FOOD: "https://namhaeon.com/namhaeroOn/main/storyFood",
+    // FOOD: "http://172.16.8.20/food",
     VISIT: "https://visitnamhae.co.kr/event"
+    // VISIT : "http://172.16.8.20/visit"
 }
 
 export const PUBLIC_BUS_LIST = [

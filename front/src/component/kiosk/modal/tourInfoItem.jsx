@@ -43,11 +43,14 @@ const TourInfoItem = () => {
                     <img src={activeTourPlace.img} alt={activeTourPlace.title}/>
                 </div>
                 <div className="modal__footer">
-                    <button type="button"
-                            className="btn-icon btn-icon--black btn-cctv"
-                            onClick={() => setActiveModalType(MODAL_TYPE.CCTV)}
-                    >실시간 CCTV
-                    </button>
+                    {
+                        activeTourPlace.mgtno !== '' &&
+                        <button type="button"
+                                className="btn-icon btn-icon--black btn-cctv"
+                                onClick={() => setActiveModalType(MODAL_TYPE.CCTV)}
+                        >라이브 뷰
+                        </button>
+                    }
                     <button type="button" className="btn-icon btn-icon--red btn-close modal-close"
                             onClick={() => handleModalClose()}>나가기
                     </button>
