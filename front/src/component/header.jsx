@@ -42,35 +42,42 @@ const Header = () => {
         return () => clearInterval(timer);
     }, []);
 
+
     useEffect(()=>{
         if(weather){
             if(weather.data){
-                let skyNm = weather.data[0].skyNm;
-                let temp = weather.data[0].nowTemp;
-                let ptyNm = weather.data[0].ptyNm;
+                if(weather.data.length > 0){
+                    let skyNm = weather.data[0].skyNm;
+                    let temp = weather.data[0].nowTemp;
+                    let ptyNm = weather.data[0].ptyNm;
 
-                setTempInfo(temp);
+                    setTempInfo(temp);
 
-                if(ptyNm === "없음"){
-                    if(skyNm === "맑음"){
-                        setSkyInfo("sun")
-                    }else if(skyInfo === "흐림"){
-                        setSkyInfo("cloud")
+                    if(ptyNm === "없음"){
+                        if(skyNm === "맑음"){
+                            setSkyInfo("sun")
+                        }else if(skyInfo === "흐림"){
+                            setSkyInfo("cloud")
+                        }else{
+                            setSkyInfo("sun-cloud")
+                        }
                     }else{
-                        setSkyInfo("sun-cloud")
+                        if(ptyNm === "비"){
+                            setSkyInfo("rain")
+                        }else if(ptyNm === "눈"){
+                            setSkyInfo("snow")
+                        }else{
+                            setSkyInfo("rain-snow")
+                        }
                     }
                 }else{
-                    if(ptyNm === "비"){
-                        setSkyInfo("rain")
-                    }else if(ptyNm === "눈"){
-                        setSkyInfo("snow")
-                    }else{
-                        setSkyInfo("rain-snow")
-                    }
+                    setSkyInfo("sun");
+                    setTempInfo(20);
                 }
+
             }else{
                 setSkyInfo("sun")
-                setTempInfo("0")
+                setTempInfo(20)
             }
         }
     }, [weather])

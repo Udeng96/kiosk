@@ -70,7 +70,17 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: #212637;
+  background: url("../../image/img/main/img_bg-cctv_3840x2160.png") no-repeat center/100%;
+
+  .cctv__title{
+    position: absolute;
+    top: 144px;
+    left: 800px;
+    font-family: "MuseumClassic";
+    font-size: 110px;
+    color: #FFF;
+  }
+
 }
 .modal .cctv__in {
   width: 100%;
