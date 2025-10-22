@@ -1,125 +1,217 @@
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-  visibility: visible;
-  z-index: 100;
-  transition: visibility 450ms, opacity 450ms;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+    transition: visibility 450ms, opacity 450ms;
 }
+
 .modal:has(.cctv) {
-  z-index: 101;
 }
+
 .modal .modal__footer button {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  transition: all 250ms ease-in-out, visibility 0ms;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: all 250ms ease-in-out, visibility 0ms;
 }
+
 .modal .modal__footer button:nth-child(1) {
-  transition-delay: 0ms;
+    transition-delay: 0ms;
 }
+
 .modal .modal__footer button:nth-child(2) {
-  transition-delay: 150ms;
+    transition-delay: 150ms;
 }
+
 .modal .modal__footer button:nth-child(3) {
-  transition-delay: 250ms;
+    transition-delay: 250ms;
 }
+
 .modal.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0ms 350ms, opacity 350ms;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0ms 350ms, opacity 350ms;
 }
+
 .modal.hidden .modal__footer button {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(80px);
-  transition: visibility 0ms 550ms;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(80px);
+    transition: visibility 0ms 550ms;
 }
+
 .modal__content {
-  position: absolute;
-  left: 50%;
-  bottom: 56px;
-  transform: translateX(-50%);
-}
-.modal__frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 250ms;
-}
-.modal__frame.ani {
-  opacity: 1;
-  transition: opacity 350ms 250ms ease-in-out;
-}
-.modal__frame--tour {
-  width: 3840px;
-  height: 1796px;
-  margin-bottom: 44px;
-}
-.modal__footer {
-  display: flex;
-  justify-content: center;
-  gap: 0 58px;
-}
-.modal .cctv {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../../image/img/main/img_bg-cctv_3840x2160.png") no-repeat center/100%;
-
-  .cctv__title{
     position: absolute;
-    top: 144px;
-    left: 800px;
-    font-family: "MuseumClassic";
-    font-size: 110px;
-    color: #FFF;
-  }
+    left: 50%;
+    bottom: 56px;
+    transform: translateX(-50%);
+}
+
+.modal__content.cctv {
+    display: flex;
+}
+
+.modal__frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 250ms;
+}
+
+.modal__frame.iframe-scroll-wrapper {
+    width: 810px;
+    /*height: 100vh; !* 필요 시 모달 높이에 맞게 조정 *!*/
+    overflow-y: auto;               /* ✅ 스크롤 담당 */
+    -webkit-overflow-scrolling: touch; /* ✅ iOS 부드러운 스크롤 */
+    overscroll-behavior: contain;   /* ✅ Edge/Chromium 터치 버그 방지 */
+    touch-action: pan-y;            /* ✅ 터치 드래그를 스크롤로 인식 */
+    -ms-touch-action: pan-y;
+}
+
+.iframe-scroll{
+    width: 100%;
+    /*height: 1800px; !* 내부 페이지 예상 높이 *!*/
+    border: none;
+    background-color: #fff;
+    pointer-events: auto;
+}
+
+.modal__frame.ani {
+    opacity: 1;
+    transition: opacity 350ms 250ms ease-in-out;
+}
+
+.modal__frame--tour {
+    width: 3840px;
+    height: 1796px;
+    margin-bottom: 44px;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: center;
+    gap: 0 58px;
+}
+
+.modal .cctv .modal__footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    height: auto;
+}
+
+.modal .cctv .modal__footer > button {
+    position: unset;
+    transform: unset;
+}
+
+.modal .cctv .modal__footer > button:disabled {
+    opacity: 50%;
+    pointer-events: none;
+}
+
+.modal .cctv {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../image/img/main/img_bg-cctv_3840x2160.png") no-repeat center/100%;
+
+    .cctv__title {
+        position: absolute;
+        top: 144px;
+        left: 800px;
+        font-family: "MuseumClassic";
+        font-size: 110px;
+        color: #FFF;
+    }
 
 }
+
+.modal .cctv__box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 74%;
+    margin-top: 340px;
+}
+
 .modal .cctv__in {
-  width: 100%;
-  height: 100%;
+    width: 100%;
 }
+
+.modal.cctv .cctv__in {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 1152px;
+    height: 750px;
+}
+
+.modal.cctv .cctv__in > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 102px;
+    position: absolute;
+    bottom: 0;
+    color: #DCDCFA;
+    font-size: 42px;
+    font-family: "MuseumClassic";
+}
+
 .modal .cctv__in.nothing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
+
 .modal .cctv__in.nothing i {
-  display: block;
-  width: 120px;
-  height: 120px;
+    display: block;
+    width: 120px;
+    height: 120px;
 }
+
 .modal .cctv__in.nothing p {
-  font-size: 64px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
+    font-size: 64px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
 }
+
 .modal .cctv button {
-  position: absolute;
-  bottom: 56px;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dimmed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+
 
 /*# sourceMappingURL=modal.css.map */

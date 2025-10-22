@@ -1,4 +1,5 @@
 .view {
+  position:absolute;
   width: 100%;
   height: 100%;
   background: url("../../../image/img/view/img_main-bg_3840x2160.jpg") no-repeat center/cover;

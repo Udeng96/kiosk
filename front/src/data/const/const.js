@@ -136,25 +136,33 @@ import TWELVE12_CONTENT from "@/assets/image/img/view/img_contents-12_3334x1450.
 
 export const isDev = process.env.NODE_ENV === "development";
 
+export const WEB_TYPE = {
+    NONE : "NONE",
+    NANGMAN : "NANGMAN",
+    NAMHAERO : "NAMHAERO",
+    NAMHAEROFOOD : "NAMHAEROFOOD",
+    VISIT : "VISIT",
+}
+
 export const MODAL_TYPE = {
-    NONE: "NONE",
-    SWIPER: "SWIPER",
-    TOUR: "TOUR",
-    NAMHAERO: "NAMHAERO",
-    MARKET: "MARKET",
-    FOOD: "FOOD",
-    VISIT: "VISIT",
-    CCTV: "CCTV",
+    NONE : "NONE",
+    PLACE : "PLACE",
+    CHANGSENG : "CHANGSENG",
+    MARKET : "MARKET",
+    TOUR : "TOUR",
+    BUS : "BUS",
+    CCTV : "CCTV",
+    CCTV_WHOLE : "CCTV_WHOLE",
 }
 
 export const PAGE_TYPE = {
-    STANDBY: "STANDBY",
-    MAIN: "MAIN",
-    TWELVE: "TWELVE",
-    BUS: "BUS",
+
+    START: "START",
+    SECOND : "SECOND",
+    THIRD : "THIRD"
 }
 
-export const MAIN_TYPE = {
+export const MENU_TYPE = {
     TOUR: "TOUR",
     BARAE: "BARAE"
 }
@@ -165,6 +173,12 @@ export const BUS_TYPE = {
     PUBLIC2: {cd:"PUBLIC2", nm:"공영 2버스"},
     WALK: {cd:"WALK", nm:"뚜벅이 버스"},
     VILL : {cd:"VILL", nm:"농어촌 버스"},
+}
+
+export const CHANGSENG_TYPE = {
+    FIRST : {cd:"FIRST", nm:"1층"},
+    SECOND : {cd:"SECOND", nm:"2층"},
+    THIRD : {cd:"THIRD", nm:"3층"},
 }
 
 export const BUS_TYPE_LIST = [
@@ -181,12 +195,52 @@ export const TOUR_MODAL_NONE = {
     area: "NONE",
     mgtno: ''
 }
+export const CCTV_LIST = [
+    {
+        nm : '이순신바다공원', mgtno: '102072',
+    },
+    {
+        nm : '독일마을', mgtno: '102080',
+    },
+    {
+        nm : '다랭이 마을', mgtno: '102074',
+    },
+    {
+        nm : '지족죽방렴', mgtno: '102081',
+    },
 
+    {
+        nm : '송정솔바람해변', mgtno: '102078',
+    },
+    {
+        nm : '상주은모래비치', mgtno: '102077',
+    },
+    {
+        nm : '파라다랑스', mgtno: '102075',
+    },
+    {
+        nm : '설리스카이워크', mgtno: '102079',
+    },
+    {
+        nm : '남해대교교각', mgtno: '102073',
+    },
+    {
+        nm : '별해로', mgtno: '102082',
+    },
+    {
+        nm : '금산', mgtno: '102366',
+    }
+    // {
+    //     nm : '보물섬전망대', mgtno: '102083'
+    // },
+
+]
 export const TOUR_MODAL_LIST = [
 
     // 설천면
     [
-        {index: 27, img: TOUR27, title: "남해각", area: "설천면", mgtno : ''},
+
+        {index: 27, img: TOUR27, title: "남해각", area: "설천면", mgtno : '102073'},
         {index: 28, img: TOUR28, title: "노량거북선", area: "설천면", mgtno : ''},
         {index: 29, img: TOUR29, title: "충렬사 관광안내소", area: "설천면", mgtno: ''},
     ],
@@ -238,7 +292,7 @@ export const TOUR_MODAL_LIST = [
 // 상주면
     [
         {index: 4, img: TOUR4, title: "상주은모래비치", area: "상주면", mgtno: '102077'},// 확인해봐야함
-        {index: 5, img: TOUR5, title: "금산", area: "상주면", mgtno: '102076'},
+        {index: 5, img: TOUR5, title: "금산", area: "상주면", mgtno: '102366'},
         {index: 6, img: TOUR6, title: "노도", area: "상주면", mgtno: ''},
     ],
 // 미조면
@@ -287,30 +341,32 @@ export const NAMHAE__CREATE_AREA = {
 
 export const NAMHAE_AREA_LIST = [
     NAMHAE_AREA.NONE,
-    NAMHAE_AREA.SC,
-    NAMHAE_AREA.GH,
-    NAMHAE_AREA.SM,
     NAMHAE_AREA.NH,
-    NAMHAE_AREA.NM,
     NAMHAE_AREA.ID,
-    NAMHAE_AREA.CS,
-    NAMHAE_AREA.SD,
     NAMHAE_AREA.SJ,
-    NAMHAE_AREA.MJ
+    NAMHAE_AREA.SD,
+    NAMHAE_AREA.MJ,
+    NAMHAE_AREA.NM,
+    NAMHAE_AREA.SM,
+    NAMHAE_AREA.GH,
+    NAMHAE_AREA.SC,
+    NAMHAE_AREA.CS,
+
 ]
 
 export const NAMHAE_CREATE_AREA_LIST = [
     NAMHAE__CREATE_AREA.NONE,
-    NAMHAE__CREATE_AREA.SC,
-    NAMHAE__CREATE_AREA.GH,
-    NAMHAE__CREATE_AREA.SM,
     NAMHAE__CREATE_AREA.NH,
-    NAMHAE__CREATE_AREA.NM,
     NAMHAE__CREATE_AREA.ID,
-    NAMHAE__CREATE_AREA.CS,
-    NAMHAE__CREATE_AREA.SD,
     NAMHAE__CREATE_AREA.SJ,
-    NAMHAE__CREATE_AREA.MJ
+    NAMHAE__CREATE_AREA.SD,
+    NAMHAE__CREATE_AREA.MJ,
+    NAMHAE__CREATE_AREA.NM,
+    NAMHAE__CREATE_AREA.SM,
+    NAMHAE__CREATE_AREA.GH,
+    NAMHAE__CREATE_AREA.SC,
+    NAMHAE__CREATE_AREA.CS,
+
 ]
 
 export const NAMHAE_BARAE = {
@@ -374,7 +430,7 @@ export const NAMHAE_BARAE_THREE_LIST = [
 ]
 
 export const IFRAME_URL = {
-    TOUR:  "https://namhae.to`urplatform.co.kr/",
+    TOUR:  "https://namhae.tourplatform.co.kr/",
     // TOUR:  "http://172.16.8.20/tour",
     NAMHAERO: "https://namhaeon.com/namhaeroOn/main",
     // NAMHAERO: "http://172.16.8.20/namhaero",
@@ -542,7 +598,7 @@ export const TWELVE_ITEM_LIST = [
     },
     {
         index: 9,
-        title: "방조어부림과 물미해안",
+        title: "망운산과 화방사",
         notice: "스마트폰으로 QR코드를 스캔해",
         notice2: "지도에서 위치를 확인하세요.",
         thumb: TWELVE9_THUMB,
@@ -551,13 +607,14 @@ export const TWELVE_ITEM_LIST = [
     },
     {
         index: 10,
-        title: "망운산과 화방사",
+        title: "방조어부림과 물미해안",
         notice: "스마트폰으로 QR코드를 스캔해",
         notice2: "지도에서 위치를 확인하세요.",
         thumb: TWELVE10_THUMB,
         qr: TWELVE10_QR,
         content: TWELVE10_CONTENT
     },
+
     {
         index: 11,
         title: "호구산과 용문사",
@@ -577,5 +634,7 @@ export const TWELVE_ITEM_LIST = [
         content: TWELVE12_CONTENT
     }
 ];
+
+export const domain = window.location.host;
 
 

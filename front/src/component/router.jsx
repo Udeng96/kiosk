@@ -1,14 +1,16 @@
-import Kiosk from "@/component/kiosk/kiosk.jsx";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Create from "@/component/kioskCreate/create.jsx";
+import Default from "@/component/new/default.jsx";
+import Namhae from "@/component/new/namhae.jsx";
 
 
 const Router = () => {
+
+
     return(
         <BrowserRouter basename={"/kiosk"}>
             <Routes>
-                <Route path="/" element={<Kiosk/>}/>
-                <Route path="/create" element={<Create/>}/>
+                <Route path="/" element={<Default/>}/>
+                <Route path="/create" element={<Namhae/>}/>
             </Routes>
         </BrowserRouter>
     )
