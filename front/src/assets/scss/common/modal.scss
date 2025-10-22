@@ -86,7 +86,6 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-    //background-color: #212637;
     &__title{
       position: absolute;
       top: 144px;
@@ -97,6 +96,8 @@
     }
 
     &__in {
+      display: flex;
+      flex-wrap: wrap;
       width: 100%;
       height: 100%;
 
