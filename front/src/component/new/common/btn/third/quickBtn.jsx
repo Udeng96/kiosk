@@ -23,14 +23,14 @@ const QuickBtn = ({isCreate}) => {
     return(
         <div className={"quick-btn"}>
             <div className="change-mode">
-                <button type="button" onClick={()=> handleBtn(MODAL_TYPE.TOUR)} className="btn-change btn-change--view"><i></i>남해
+                <button type="button" onPointerDown={()=> handleBtn(MODAL_TYPE.TOUR)} className="btn-change btn-change--view"><i></i>남해
                     12경 보기
                 </button>
-                <button type="button" onClick={()=> handleBtn(MODAL_TYPE.BUS)} className="btn-change btn-change--bus">
+                <button type="button" onPointerDown={()=> handleBtn(MODAL_TYPE.BUS)} className="btn-change btn-change--bus">
                     <i></i>버스 노선 보기
                 </button>
             </div>
-            <button className={"btn-change--cctv"} onClick={()=>handleBtn(MODAL_TYPE.CCTV_WHOLE)}>라이브뷰 모아보기</button>
+            <button className={"btn-change--cctv"} onPointerDown={()=>handleBtn(MODAL_TYPE.CCTV_WHOLE)}>라이브뷰 모아보기</button>
         </div>
     )
 

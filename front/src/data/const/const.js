@@ -142,6 +142,7 @@ export const WEB_TYPE = {
     NAMHAERO : "NAMHAERO",
     NAMHAEROFOOD : "NAMHAEROFOOD",
     VISIT : "VISIT",
+    MALL : "MALL",
 }
 
 export const MODAL_TYPE = {
@@ -235,6 +236,71 @@ export const CCTV_LIST = [
     // },
 
 ]
+
+export const TOUR_MODAL_GIS_LIST = [
+    [
+        {title: '남해각', area : '설천면', width : '160px', height: '84px', top: '153px', left:'260px'},
+        {title: '충렬사 관광안내소', area : '설천면', width : '160px', height: '84px', top: '111px', left:'668px'},
+        {title: '노량거북선', area : '설천면', width : '212px', height: '84px', top: '263px', left:'652px'},
+    ],
+
+    [
+        {title: '이순신바다공원', area: '고현면', width: '279px', height: '84px', top: '373px', left: '922px'},
+    ],
+
+    [
+        {title: '남해스포츠파크', area: '서면', width: '279px', height: '84px', top: '1325px', left: '506px'},
+        {title: '장항숲', area: '서면', width: '155px', height: '84px', top: '1374px', left: '1029px'},
+    ],
+
+    [
+        {title: '남해유배문학관', area: '남해읍', width: '276px', height: '84px', top: '38%', left: '1339px'},
+    ],
+    [
+        {title: '아난티남해', area: '남면', width: '215px', height: '84px', top: '684px', left: '678px'},
+        {title: '두곡월포해수욕장', area: '남면', width: '315px', height: '84px', top: '723px', left: '1082px'},
+        {title: '섬이정원', area: '남면', width: '184px', height: '84px', top: '1035px', left: '776px'},
+        {title: '사촌해수욕장', area: '남면', width: '243px', height: '84px', top: '1266px', left: '753px'},
+        {title: '다랭이 마을', area: '남면', width: '227px', height: '84px', top: '1599px', left: '1387px'},
+    ],
+    [
+        {title: '남해탈공연박물관', area: '이동면', width: '307px', height: '84px', top: '22%', left: '787px'},
+        {title: '앵강다숲', area: '이동면', width: '189px', height: '84px', top: '56%', left: '1148px'},
+    ],
+    [
+
+        {title: '단항 회센터', area: '창선면', width: '224px', height: '84px', top: '233px', left: '1252px'},
+        {title: '별해로', area: '창선면', width: '151px', height: '84px', top: '608px', left: '1291px'},
+        {title: '뮤지엄 남해', area: '창선면', width: '219px', height: '84px', top: '922px', left: '1425px'},
+        {title: '동대만 간이역', area: '창선면', width: '255px', height: '84px', top: '1004px', left: '600px'},
+        {title: '토피아랜드 테마정원', area: '창선면', width: '212px', height: '84px', top: '1323px', left: '571px'},
+        {title: '라키비움', area: '창선면', width: '189px', height: '84px', top: '1373px', left: '1355px'},
+        {title: '사우스케이프', area: '창선면', width: '243px', height: '84px', top: '1511px', left: '1464px'}
+    ],
+    [
+        {title: '물미해안전망대', area: '삼동면', width: '276px', height: '84px', top: '1243px', left: '1196px'},
+        {title: '남해편백자연휴양림', area: '삼동면', width: '336px', height: '84px', top: '1589px', left: '735px'},
+        {title: '힐링숲타운', area: '삼동면', width: '214px', height: '84px', top: '1340px', left: '710px'},
+        {title: '독일마을', area: '삼동면', width: '187px', height: '84px', top: '681px', left: '1134px'},
+        {title: '물건방조어부림', area: '삼동면', width: '272px', height: '84px', top: '727px', left: '1631px'},
+        {title: '남해군 요트학교', area: '삼동면', width: '287px', height: '84px', top: '913px', left: '1647px'},
+
+    ],
+    [
+        {title: '금산', area: '상주면', width: '124px', height: '84px', top: '23%', left: '1094px'},
+        {title: '노도', area: '상주면', width: '124px', height: '84px', top: '921px', left: '431px'},
+        {title: '상주은모래비치', area: '상주면', width: '278px', height: '84px', top: '1155px', left: '984px'},
+    ],
+    [
+        {title: '송정솔바람해변', area: '미조면', width: '277px', height: '84px', top: '878px', left: '943px'},
+        {title: '설리해수욕장', area: '미조면', width: '249px', height: '84px', top: '1300px', left: '943px'},
+        {title: '스페이스 미조', area: '미조면', width: '249px', height: '84px', top: '1232px', left: '1262px'},
+        {title: '미조북항', area: '미조면', width: '184px', height: '84px', top: '1023px', left: '1335px'},
+        {title: '조도', area: '미조면', width: '122px', height: '84px', top: '1455px', left: '1116px'},
+        {title: '설리스카이워크', area: '미조면', width: '252px', height: '84px', top: '1155px', left: '498px'},
+
+    ]
+]
 export const TOUR_MODAL_LIST = [
 
     // 설천면
@@ -307,36 +373,36 @@ export const TOUR_MODAL_LIST = [
 ];
 
 export const NAMHAE_AREA = {
-    NONE: {cd: "NONE", nm: "지도 홈", img: HOME_IMG, map: HOME_MAP, tourList: []},
-    SC: {cd: "SULCHEON", nm: "설천면", img: SULCHEON_IMG, map: SULCEHON_MAP, tourList: TOUR_MODAL_LIST[0]},
-    GH: {cd: "GOHYEON", nm: "고현면", img: GOHYEON_IMG, map: GOHYEON_MAP, tourList: TOUR_MODAL_LIST[1]},
-    SM: {cd: "SEOMYEON", nm: "서면", img: SEOMYEON_IMG, map: SEOMYEON_MAP, tourList: TOUR_MODAL_LIST[2]},
-    NH: {cd: "MAMHAE", nm: "남해읍", img: NAMHAE_IMG, map: NAMHAE_MAP, tourList: TOUR_MODAL_LIST[3]},
-    NM: {cd: "NAMMYEON", nm: "남면", img: NAMMYEON_IMG, map: NAMMYEON_MAP, tourList: TOUR_MODAL_LIST[4]},
-    ID: {cd: "IDONG", nm: "이동면", img: IDONG_IMG, map: IDONG_MAP, tourList: TOUR_MODAL_LIST[5]},
-    CS: {cd: "CHANGSEON", nm: "창선면", img: CHANGSEON_IMG, map: CHANGSEON_MAP, tourList: TOUR_MODAL_LIST[6]},
-    SD: {cd: "SAMDONG", nm: "삼동면", img: SAMDONG_IMG, map: SAMDONG_MAP, tourList: TOUR_MODAL_LIST[7]},
-    SJ: {cd: "SANGJU", nm: "상주면", img: SANGJU_IMG, map: SANGJU_MAP, tourList: TOUR_MODAL_LIST[8]},
-    MJ: {cd: "MIJO", nm: "미조면", img: MIJO_IMG, map: MIJO_MAP, tourList: TOUR_MODAL_LIST[9]}
+    NONE: {cd: "NONE", nm: "지도 홈", img: HOME_IMG, map: HOME_MAP, tourList: [], gisList:[]},
+    SC: {cd: "SULCHEON", nm: "설천면", img: SULCHEON_IMG, map: SULCEHON_MAP, tourList: TOUR_MODAL_LIST[0], gisList : TOUR_MODAL_GIS_LIST[0]},
+    GH: {cd: "GOHYEON", nm: "고현면", img: GOHYEON_IMG, map: GOHYEON_MAP, tourList: TOUR_MODAL_LIST[1], gisList : TOUR_MODAL_GIS_LIST[1]},
+    SM: {cd: "SEOMYEON", nm: "서면", img: SEOMYEON_IMG, map: SEOMYEON_MAP, tourList: TOUR_MODAL_LIST[2], gisList : TOUR_MODAL_GIS_LIST[2]},
+    NH: {cd: "NAMHAE", nm: "남해읍", img: NAMHAE_IMG, map: NAMHAE_MAP, tourList: TOUR_MODAL_LIST[3], gisList : TOUR_MODAL_GIS_LIST[3]},
+    NM: {cd: "NAMMYEON", nm: "남면", img: NAMMYEON_IMG, map: NAMMYEON_MAP, tourList: TOUR_MODAL_LIST[4], gisList : TOUR_MODAL_GIS_LIST[4]},
+    ID: {cd: "IDONG", nm: "이동면", img: IDONG_IMG, map: IDONG_MAP, tourList: TOUR_MODAL_LIST[5] , gisList : TOUR_MODAL_GIS_LIST[5]},
+    CS: {cd: "CHANGSEON", nm: "창선면", img: CHANGSEON_IMG, map: CHANGSEON_MAP, tourList: TOUR_MODAL_LIST[6], gisList : TOUR_MODAL_GIS_LIST[6]},
+    SD: {cd: "SAMDONG", nm: "삼동면", img: SAMDONG_IMG, map: SAMDONG_MAP, tourList: TOUR_MODAL_LIST[7], gisList : TOUR_MODAL_GIS_LIST[7]},
+    SJ: {cd: "SANGJU", nm: "상주면", img: SANGJU_IMG, map: SANGJU_MAP, tourList: TOUR_MODAL_LIST[8], gisList : TOUR_MODAL_GIS_LIST[8]},
+    MJ: {cd: "MIJO", nm: "미조면", img: MIJO_IMG, map: MIJO_MAP, tourList: TOUR_MODAL_LIST[9], gisList : TOUR_MODAL_GIS_LIST[9]}
 }
 
 
 
 export const NAMHAE__CREATE_AREA = {
-    NONE: {cd: "NONE", nm: "지도 홈", img: HOME_IMG, map: HOME_MAP, tourList: []},
-    SC: {cd: "SULCHEON", nm: "설천면", img: SULCHEON_IMG, map: SULCEHON_MAP, tourList: TOUR_MODAL_LIST[0]},
-    GH: {cd: "GOHYEON", nm: "고현면", img: GOHYEON_IMG, map: GOHYEON_MAP, tourList: TOUR_MODAL_LIST[1]},
-    SM: {cd: "SEOMYEON", nm: "서면", img: SEOMYEON_IMG, map: SEOMYEON_MAP, tourList: TOUR_MODAL_LIST[2]},
-    NH: {cd: "MAMHAE", nm: "남해읍", img: NAMHAE_IMG, map: NAMHAE_MAP, tourList: [
+    NONE: {cd: "NONE", nm: "지도 홈", img: HOME_IMG, map: HOME_MAP, tourList: [], gisList:[]},
+    SC: {cd: "SULCHEON", nm: "설천면", img: SULCHEON_IMG, map: SULCEHON_MAP, tourList: TOUR_MODAL_LIST[0], gisList : TOUR_MODAL_GIS_LIST[0]},
+    GH: {cd: "GOHYEON", nm: "고현면", img: GOHYEON_IMG, map: GOHYEON_MAP, tourList: TOUR_MODAL_LIST[1], gisList : TOUR_MODAL_GIS_LIST[1]},
+    SM: {cd: "SEOMYEON", nm: "서면", img: SEOMYEON_IMG, map: SEOMYEON_MAP, tourList: TOUR_MODAL_LIST[2], gisList : TOUR_MODAL_GIS_LIST[2]},
+    NH: {cd: "NAMHAE", nm: "남해읍", img: NAMHAE_IMG, map: NAMHAE_MAP, tourList: [
             {index: 1, img: TOUR1, title: "남해유배문학관", area: "남해읍", mgtno: ''},
             {index: 37, img: TOUR36, title: "창생플랫폼", area: "남해읍", mgtno: ''},
-        ]},
-    NM: {cd: "NAMMYEON", nm: "남면", img: NAMMYEON_IMG, map: NAMMYEON_MAP, tourList: TOUR_MODAL_LIST[4]},
-    ID: {cd: "IDONG", nm: "이동면", img: IDONG_IMG, map: IDONG_MAP, tourList: TOUR_MODAL_LIST[5]},
-    CS: {cd: "CHANGSEON", nm: "창선면", img: CHANGSEON_IMG, map: CHANGSEON_MAP, tourList: TOUR_MODAL_LIST[6]},
-    SD: {cd: "SAMDONG", nm: "삼동면", img: SAMDONG_IMG, map: SAMDONG_MAP, tourList: TOUR_MODAL_LIST[7]},
-    SJ: {cd: "SANGJU", nm: "상주면", img: SANGJU_IMG, map: SANGJU_MAP, tourList: TOUR_MODAL_LIST[8]},
-    MJ: {cd: "MIJO", nm: "미조면", img: MIJO_IMG, map: MIJO_MAP, tourList: TOUR_MODAL_LIST[9]}
+        ],gisList : TOUR_MODAL_GIS_LIST[3]},
+    NM: {cd: "NAMMYEON", nm: "남면", img: NAMMYEON_IMG, map: NAMMYEON_MAP, tourList: TOUR_MODAL_LIST[4], gisList : TOUR_MODAL_GIS_LIST[4]},
+    ID: {cd: "IDONG", nm: "이동면", img: IDONG_IMG, map: IDONG_MAP, tourList: TOUR_MODAL_LIST[5], gisList : TOUR_MODAL_GIS_LIST[5]},
+    CS: {cd: "CHANGSEON", nm: "창선면", img: CHANGSEON_IMG, map: CHANGSEON_MAP, tourList: TOUR_MODAL_LIST[6], gisList : TOUR_MODAL_GIS_LIST[6]},
+    SD: {cd: "SAMDONG", nm: "삼동면", img: SAMDONG_IMG, map: SAMDONG_MAP, tourList: TOUR_MODAL_LIST[7], gisList : TOUR_MODAL_GIS_LIST[7]},
+    SJ: {cd: "SANGJU", nm: "상주면", img: SANGJU_IMG, map: SANGJU_MAP, tourList: TOUR_MODAL_LIST[8], gisList : TOUR_MODAL_GIS_LIST[8]},
+    MJ: {cd: "MIJO", nm: "미조면", img: MIJO_IMG, map: MIJO_MAP, tourList: TOUR_MODAL_LIST[9], gisList : TOUR_MODAL_GIS_LIST[9]}
 }
 
 export const NAMHAE_AREA_LIST = [
@@ -436,8 +502,9 @@ export const IFRAME_URL = {
     // NAMHAERO: "http://172.16.8.20/namhaero",
     FOOD: "https://namhaeon.com/namhaeroOn/main/storyFood",
     // FOOD: "http://172.16.8.20/food",
-    VISIT: "https://visitnamhae.co.kr/event"
+    VISIT: "https://visitnamhae.co.kr/event",
     // VISIT : "http://172.16.8.20/visit"
+    MALL : "https://www.enamhae.co.kr",
 }
 
 export const PUBLIC_BUS_LIST = [

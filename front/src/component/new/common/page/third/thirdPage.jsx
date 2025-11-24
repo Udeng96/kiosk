@@ -55,6 +55,7 @@ const ThirdPage = ({isCreate, isShow}) => {
         }
     }, [isCreate, selectTourCreateArea, selectTourArea])
 
+
     useEffect(() => {
         if (isCreate) {
             setActiveMenu(activeThirdCreateMenu)
@@ -89,7 +90,7 @@ const ThirdPage = ({isCreate, isShow}) => {
 
     return (
         <section className={`screen main`}>
-            <button type="button" className="btn-back" onClick={() => {
+            <button type="button" className="btn-back" onPointerDown={() => {
                 handleBackBtn()
             }}>대기화면으로 돌아가기
             </button>

@@ -36,7 +36,7 @@ const TourMenu = ({isCreate, activeArea}) => {
         <div className="tab-wrap">
             {
                 menuList.map((area)=>(
-                    <button type="button" className={`btn-tab ${activeArea.cd === area.cd ? 'active' : ''}`} onClick={()=> handleMenu(area)} key={area.cd}>{area.nm}</button>
+                    <button type="button" className={`btn-tab ${activeArea.cd === area.cd ? 'active' : ''}`} onPointerDown={()=> handleMenu(area)} key={area.cd}>{area.nm}</button>
                 ))
             }
         </div>

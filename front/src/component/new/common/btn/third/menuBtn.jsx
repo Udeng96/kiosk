@@ -45,10 +45,10 @@ const   MenuBtn = ({isCreate, isShow}) => {
         <div className={`menu-toggle ${isShow ? 'active' : ''}`}>
 s            <button type="button"
                     className={`btn-menu btn-menu--tour ${activeMenu === MENU_TYPE.TOUR ? 'active' : ''}`}
-                    onClick={() => handleMenu(MENU_TYPE.TOUR)}>관광지</button>
+                    onPointerDown={() => handleMenu(MENU_TYPE.TOUR)}>관광지</button>
             <button type="button"
                     className={`btn-menu btn-menu--bus ${activeMenu === MENU_TYPE.BARAE ? 'active' : ''}`}
-                    onClick={() => handleMenu(MENU_TYPE.BARAE)}>바래길</button>
+                    onPointerDown={() => handleMenu(MENU_TYPE.BARAE)}>바래길</button>
             <div className="bg"></div>
         </div>
     )

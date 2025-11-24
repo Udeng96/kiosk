@@ -4,27 +4,27 @@ import {useCreate} from "@/store/createZustand.jsx";
 import {useShallow} from "zustand/react/shallow";
 import {useKiosk} from "@/store/kioskZustand.jsx";
 
-const TourItem = ({isCreate,isShow, tourArea, activeMenu}) => {
+const TourItem = ({isCreate, isShow, tourArea, activeMenu}) => {
 
     const [isActive, setIsActive] = useState(false);
     const [activeArea, setActiveArea] = useState(tourArea);
-    const {setActiveCreateModal, setSelectCreateTourPlace} = useCreate((useShallow((state)=> ({
-        setActiveCreateModal : state.actions.setActiveModal,
-        setSelectCreateTourPlace : state.actions.setSelectTourPlace
+    const {setActiveCreateModal, setSelectCreateTourPlace} = useCreate((useShallow((state) => ({
+        setActiveCreateModal: state.actions.setActiveModal,
+        setSelectCreateTourPlace: state.actions.setSelectTourPlace
 
     }))))
 
-    const {setActiveModal, setSelectTourPlace} = useKiosk((useShallow((state)=> ({
-        setActiveModal : state.actions.setActiveModal,
-        setSelectTourPlace : state.actions.setSelectTourPlace
+    const {setActiveModal, setSelectTourPlace} = useKiosk((useShallow((state) => ({
+        setActiveModal: state.actions.setActiveModal,
+        setSelectTourPlace: state.actions.setSelectTourPlace
 
     }))))
 
     useEffect(() => {
-        setTimeout(()=>{
+        setTimeout(() => {
             setIsActive(false);
             setActiveArea(NAMHAE_AREA.NONE);
-        },300)
+        }, 300)
     }, [activeMenu]);
 
     useEffect(() => {
@@ -51,16 +51,29 @@ const TourItem = ({isCreate,isShow, tourArea, activeMenu}) => {
         }
     }, [isActive, isShow]);
 
+    const handleGisBtn = (nm) => {
+        const place = activeArea.tourList.find((item) => item.title === nm);
+        if (place) {
+            if (isCreate) {
+                setSelectCreateTourPlace(place);
+                setActiveCreateModal(MODAL_TYPE.PLACE)
+            } else {
+                setSelectTourPlace(place);
+                setActiveModal(MODAL_TYPE.PLACE)
+            }
+        }
+    }
+
     const handlePlace = (place) => {
-        if(isCreate){
+        if (isCreate) {
             setSelectCreateTourPlace(place)
-            if(place.index === 37){
+            if (place.index === 37) {
                 setActiveCreateModal(MODAL_TYPE.CHANGSENG)
-            }else{
+            } else {
                 setActiveCreateModal(MODAL_TYPE.PLACE)
             }
 
-        }else{
+        } else {
             setSelectTourPlace(place)
             setActiveModal(MODAL_TYPE.PLACE)
         }
@@ -82,6 +95,17 @@ const TourItem = ({isCreate,isShow, tourArea, activeMenu}) => {
                 </div>
                 <div className="map">
                     <img src={`${activeArea.map}`} alt={activeArea.title + " 지도"}/>
+                    <ul className={"tour__list--gis--buttons"}>
+
+                        {
+                            activeArea.gisList.length > 0 &&
+                            activeArea.gisList.map((item) => (
+                                <li className="tour__item--button"
+                                    style={{width: item.width, height: item.height, left: item.left, top: item.top}}>
+                                    <button type="button" onClick={() => handleGisBtn(item.title)}></button>
+                                </li>))
+                        }
+                    </ul>
                 </div>
                 <ul className="tour__list tour__list--left">
                     {

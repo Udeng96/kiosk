@@ -41,12 +41,12 @@ const BusFoot = ({isCreate,activeBus}) => {
         <div className="bus__footer">
             <button type="button"
                     className="btn-icon btn-icon--red btn-close modal-close black"
-                    onClick={()=> handleClsBtn()}>나가기
+                    onPointerDown={()=> handleClsBtn()}>나가기
             </button>
             <div className="frame">
                 {
                     BUS_TYPE_LIST.map((item, index)=>(
-                        <button type="button" className={`btn-navi ${index===0 ? 'btn-navi--home' : ''} ${activeBus.cd === item.cd ? 'active' : ''}`} onClick={()=> handleSelectBus(item)}>{item.nm}</button>
+                        <button type="button" className={`btn-navi ${index===0 ? 'btn-navi--home' : ''} ${activeBus.cd === item.cd ? 'active' : ''}`} onPointerDown={()=> handleSelectBus(item)}>{item.nm}</button>
                     ))
                 }
             </div>

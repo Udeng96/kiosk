@@ -65,14 +65,24 @@
 }
 
 .modal__frame.iframe-scroll-wrapper {
-    width: 810px;
+    width: 900px;
+    height: 2000px;
     /*height: 100vh; !* 필요 시 모달 높이에 맞게 조정 *!*/
-    overflow-y: auto;               /* ✅ 스크롤 담당 */
-    -webkit-overflow-scrolling: touch; /* ✅ iOS 부드러운 스크롤 */
-    overscroll-behavior: contain;   /* ✅ Edge/Chromium 터치 버그 방지 */
-    touch-action: pan-y;            /* ✅ 터치 드래그를 스크롤로 인식 */
     -ms-touch-action: pan-y;
 }
+
+.modal__frame.iframe-scroll-wrapper .modal__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 184px;
+}
+
+.modal__frame.iframe-scroll-wrapper .modal__footer > div {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
 
 .iframe-scroll{
     width: 100%;
@@ -91,6 +101,10 @@
     width: 3840px;
     height: 1796px;
     margin-bottom: 44px;
+}
+
+.iframe-scroll-wrapper{
+    gap: 80px;
 }
 
 .modal__footer {

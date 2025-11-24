@@ -11,20 +11,30 @@ const NangmanCard = ({isCreate, isShow}) => {
     const iframeRef = useRef(null);
 
     useEffect(() => {
-        if(isShow && iframeRef.current){
+        if (isShow && iframeRef.current) {
             iframeRef.current.src = IFRAME_URL.TOUR;
         }
-    },[isShow])
+    }, [isShow])
 
     const handleClsBtn = () => {
-        if(isCreate){
+        if (isCreate) {
             setActiveCreateWeb(WEB_TYPE.NONE);
-        }else{
+        } else {
             setActiveWeb(WEB_TYPE.NONE);
         }
     }
 
-    return(
+    const sendScrollMessage = (distance) => {
+        iframeRef.current?.contentWindow?.postMessage(
+            {type: "scrollDown", value: distance},
+            "*" // 보안을 위해 실제 origin 예: "https://www.visitnamhae.go.kr" 로 바꾸세요
+        );
+    };
+
+    const handlePrev = () => sendScrollMessage(1900); // 아래로 1900px
+    const handleNext = () => sendScrollMessage(-1900); // 위로 1900px
+
+    return (
         <div id="modal-tourplatform" className={`modal ${isShow ? '' : 'hidden'}`}>
             <div className="dimmed"></div>
             <div className="modal__content">
@@ -34,15 +44,23 @@ const NangmanCard = ({isCreate, isShow}) => {
                         className={'iframe-scroll'}
                         src={IFRAME_URL.TOUR}
                         allow="encrypted-media"
-                        width="810"
-                        height="1800"
-                        style={{backgroundColor:'#fff',marginBottom:'80px'}}
+                        width="900"
+                        height="2000"
+                        style={{backgroundColor: '#fff', marginBottom: '80px'}}
                         title="낭만남해 홈페이지">
                     </iframe>
+                    <div className="modal__footer">
+                        <button type="button" className="btn-icon btn-icon--red btn-close"
+                                onPointerDown={() => handleClsBtn(WEB_TYPE.NONE)}></button>
+                        {/*<div>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-next "*/}
+                        {/*            onPointerDown={() => handleNext()}></button>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-prev "*/}
+                        {/*            onPointerDown={() => handlePrev()}></button>*/}
+                        {/*</div>*/}
+                    </div>
                 </div>
-                <div className="modal__footer">
-                    <button type="button" className="btn-icon btn-icon--red btn-close modal-close" onClick={()=> handleClsBtn(WEB_TYPE.NONE)}>나가기</button>
-                </div>
+
             </div>
         </div>
     )

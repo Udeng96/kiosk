@@ -64,13 +64,13 @@ const ArrowBtn = ({isCreate}) => {
 
     return(
         <div className="indicator">
-            <button type="button" className={`btn-icon btn-icon--blue btn-prev ${page === PAGE_TYPE.START ? 'hidden' : ''}`} onClick={() => handlePrevBtn()}>이전</button>
+            <button type="button" className={`btn-icon btn-icon--blue btn-prev ${page === PAGE_TYPE.START ? 'hidden' : ''}`} onPointerDown={() => handlePrevBtn()}>이전</button>
             <ul className="indicator__list">
                 <li className={`indicator__item ${page === PAGE_TYPE.START ? 'active' : ''}`}></li>
                 <li className={`indicator__item ${page === PAGE_TYPE.SECOND ? 'active' : ''}`}></li>
                 <li className={`indicator__item ${page === PAGE_TYPE.THIRD ? 'active' : ''}`}></li>
             </ul>
-            <button type="button" className={`btn-next ${page === PAGE_TYPE.THIRD ? 'hidden' : ''}`} onClick={() => handleNextBtn()}>다음</button>
+            <button type="button" className={`btn-next ${page === PAGE_TYPE.THIRD ? 'hidden' : ''}`} onPointerDown={() => handleNextBtn()}>다음</button>
         </div>
     )
 
