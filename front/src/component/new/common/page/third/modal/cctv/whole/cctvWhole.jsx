@@ -47,9 +47,9 @@ const CctvWhole = ({isCreate}) => {
                     }
                 </div>
                 <div className="modal__footer">
-                    <button type="button" className={`btn-icon btn-icon--blue btn-prev`} disabled={page===1} onClick={() => setPage(1)}>이전</button>
-                    <button type="button" className="btn-icon btn-icon--red btn-close modal-close" onClick={()=>handleCls()}>나가기</button>
-                    <button type="button" className={`btn-next `} disabled={page===2} onClick={() => setPage(2)} >다음</button>
+                    <button type="button" className={`btn-icon btn-icon--blue btn-prev`} disabled={page===1} onPointerDown={() => setPage(1)}>이전</button>
+                    <button type="button" className="btn-icon btn-icon--red btn-close modal-close" onPointerDown={()=>handleCls()}>나가기</button>
+                    <button type="button" className={`btn-next `} disabled={page===2} onPointerDown={() => setPage(2)} >다음</button>
                 </div>
             </div>
         </div>

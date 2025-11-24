@@ -55,9 +55,9 @@ const ChansengModal = () => {
                         </ul>
                         <div className="tab-wrap">
                             <p className="tab-title">주민 편의공간</p>
-                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.FIRST.cd? 'active' : ''}`} onClick={()=> setSelectModalChangseng(CHANGSENG_TYPE.FIRST)}>1층</button>
-                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.SECOND.cd ? 'active' : ''}`} onClick={()=> setSelectModalChangseng(CHANGSENG_TYPE.SECOND)}>2층</button>
-                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.THIRD.cd ? 'active' : ''}`} onClick={()=> setSelectModalChangseng(CHANGSENG_TYPE.THIRD)}>3층</button>
+                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.FIRST.cd? 'active' : ''}`} onPointerDown={()=> setSelectModalChangseng(CHANGSENG_TYPE.FIRST)}>1층</button>
+                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.SECOND.cd ? 'active' : ''}`} onPointerDown={()=> setSelectModalChangseng(CHANGSENG_TYPE.SECOND)}>2층</button>
+                            <button type="button" className={`btn-tab ${selectModalChangseng.cd === CHANGSENG_TYPE.THIRD.cd ? 'active' : ''}`} onPointerDown={()=> setSelectModalChangseng(CHANGSENG_TYPE.THIRD)}>3층</button>
                         </div>
                     </div>
                 }
@@ -72,12 +72,12 @@ const ChansengModal = () => {
                         selectCreateTourPlace.mgtno !== '' &&
                         <button type="button"
                                 className="btn-icon btn-icon--black btn-cctv"
-                                onClick={() => setActiveCreateModal(MODAL_TYPE.CCTV)}
+                                onPointerDown={() => setActiveCreateModal(MODAL_TYPE.CCTV)}
                         >라이브 뷰
                         </button>
                     }
                     <button type="button" className="btn-icon btn-icon--red btn-close modal-close"
-                            onClick={() => handleModalClose()}>나가기
+                            onPointerDown={() => handleModalClose()}>나가기
                     </button>
                 </div>
             </div>

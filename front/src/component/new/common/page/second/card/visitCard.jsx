@@ -24,6 +24,15 @@ const VisitCard = ({isCreate, isShow}) => {
             setActiveWeb(WEB_TYPE.NONE);
         }
     }
+    const sendScrollMessage = (distance) => {
+        iframeRef.current?.contentWindow?.postMessage(
+            { type: "scrollDown", value: distance },
+            "*" // 보안을 위해 실제 origin 예: "https://www.visitnamhae.go.kr" 로 바꾸세요
+        );
+    };
+
+    const handlePrev = () => sendScrollMessage(1900); // 아래로 1900px
+    const handleNext = () => sendScrollMessage(-1900); // 위로 1900px
 
     return(
         <div id="modal-visitnamhae" className={`modal ${isShow ? '' : 'hidden'}`}>
@@ -35,14 +44,18 @@ const VisitCard = ({isCreate, isShow}) => {
                         ref={iframeRef}
                         src={IFRAME_URL.VISIT}
                         allow="encrypted-media"
-                        width="810"
-                        height="1800"
+                        width="900"
+                        height="2000"
                         style={{backgroundColor:'#fff',marginBottom:'80px'}}
                         title="구석구석 남해 홈페이지">
                     </iframe>
-                </div>
-                <div className="modal__footer">
-                    <button type="button" className="btn-icon btn-icon--red btn-close modal-close" onClick={()=> handleClsBtn(MODAL_TYPE.NONE)}>나가기</button>
+                    <div className="modal__footer">
+                        <button type="button" className="btn-icon btn-icon--red btn-close" onPointerDown={()=> handleClsBtn(WEB_TYPE.NONE)}></button>
+                        {/*<div>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-next " onPointerDown={()=> handleNext()}></button>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-prev " onPointerDown={()=> handlePrev()}></button>*/}
+                        {/*</div>*/}
+                    </div>
                 </div>
             </div>
         </div>

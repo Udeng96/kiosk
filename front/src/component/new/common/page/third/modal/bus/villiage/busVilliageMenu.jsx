@@ -42,7 +42,7 @@ const BusVilliageMenu = ({isCreate,activeBus}) => {
                 activeBus.cd === BUS_TYPE.VILL.cd &&
                 FF_VILLAGE_LIST.map((item, index) => {
                     return(
-                        <button type="button" className={`btn__bus-tab ${index ===0 ? 'btn__bus-tab--home' : '' } ${activeVilLine.index === item.index ? 'active' : ''}`} onClick={()=> handleSelectVillage(item)} key={index}>{item.title}</button>
+                        <button type="button" className={`btn__bus-tab ${index ===0 ? 'btn__bus-tab--home' : '' } ${activeVilLine.index === item.index ? 'active' : ''}`} onPointerDown={()=> handleSelectVillage(item)} key={index}>{item.title}</button>
                     )
                 })
             }

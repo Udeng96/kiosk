@@ -35,14 +35,18 @@ const FoodCard = ({isCreate, isShow}) => {
                         ref={iframeRef}
                         src={IFRAME_URL.FOOD}
                         allow="encrypted-media"
-                        width="810"
-                        height="1800"
+                        width="900"
+                        height="2000"
                         style={{backgroundColor:'#fff',marginBottom:'80px'}}
                         title="남해의 먹거리 추천 페이지">
                     </iframe>
-                </div>
-                <div className="modal__footer">
-                    <button type="button" className="btn-icon btn-icon--red btn-close modal-close" onClick={()=> handleClsBtn()}>나가기</button>
+                    <div className="modal__footer">
+                        <button type="button" className="btn-icon btn-icon--red btn-close" onPointerDown={()=> handleClsBtn(WEB_TYPE.NONE)}></button>
+                        {/*<div>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-next " onPointerDown={()=> handleClsBtn(WEB_TYPE.NONE)}></button>*/}
+                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-prev " onPointerDown={()=> handleClsBtn(WEB_TYPE.NONE)}></button>*/}
+                        {/*</div>*/}
+                    </div>
                 </div>
             </div>
         </div>

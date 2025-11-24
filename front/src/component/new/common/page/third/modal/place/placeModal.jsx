@@ -87,12 +87,12 @@ const PlaceModal = ({isCreate}) => {
                         activeTourPlace.mgtno !== '' &&
                         <button type="button"
                                 className="btn-icon btn-icon--black btn-cctv"
-                                onClick={() => handleLiveView()}
+                                onPointerDown={() => handleLiveView()}
                         >라이브 뷰
                         </button>
                     }
                     <button type="button" className="btn-icon btn-icon--red btn-close modal-close"
-                            onClick={() => handleModalClose()}>나가기
+                            onPointerDown={() => handleModalClose()}>나가기
                     </button>
                 </div>
             </div>

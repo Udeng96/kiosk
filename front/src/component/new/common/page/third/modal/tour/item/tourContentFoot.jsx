@@ -39,15 +39,15 @@ const TourContentFoot = ({isCreate, activeTour}) => {
     }
     return(
         <div className="view__footer">
-            <button type="button" className="btn-back" onClick={()=> handleTour(TWELVE_ITEM_NONE)}>12경 메인으로 돌아가기</button>
+            <button type="button" className="btn-back" onPointerDown={()=> handleTour(TWELVE_ITEM_NONE)}>12경 메인으로 돌아가기</button>
             <div className="frame">
                 {
                     activeTour.index >1 &&
-                    <button type="button" className="btn-icon btn-icon--blue btn-prev black" onClick={handlePrevBtn}><p>제 {activeTour.index-1}경</p></button>
+                    <button type="button" className="btn-icon btn-icon--blue btn-prev black" onPointerDown={handlePrevBtn}><p>제 {activeTour.index-1}경</p></button>
                 }
                 {
                     activeTour.index < 12 &&
-                    <button type="button" className="btn-icon--blue btn-next black" onClick={handleNextBtn}><p>제 {activeTour.index+1}경</p></button>
+                    <button type="button" className="btn-icon--blue btn-next black" onPointerDown={handleNextBtn}><p>제 {activeTour.index+1}경</p></button>
                 }
             </div>
         </div>

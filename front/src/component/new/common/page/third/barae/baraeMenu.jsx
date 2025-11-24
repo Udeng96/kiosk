@@ -68,12 +68,12 @@ const BaraeMenu = ({isCreate, activeBarae}) => {
 
     return(
         <div className="tab-wrap">
-            <button className="btn-tab-prev" disabled={currentIndex === 0} onClick={handlePrev}></button>
+            <button className="btn-tab-prev" disabled={currentIndex === 0} onPointerDown={handlePrev}></button>
             <div className="slide-wrap">
                 <div className="btn-tab-list" ref={tabListRef}>
                     {
                         NAMHAE_BARAE_LIST.map((barae,index)=> (
-                            <button type="button" className={`btn-tab ${barae.cd === NAMHAE_BARAE.NONE.cd ? 'btn-tab--home' : ''} ${activeBarae.cd === barae.cd ? 'active' : ''}`} onClick={()=> handleBarae(barae)} key={barae.cd}>
+                            <button type="button" className={`btn-tab ${barae.cd === NAMHAE_BARAE.NONE.cd ? 'btn-tab--home' : ''} ${activeBarae.cd === barae.cd ? 'active' : ''}`} onPointerDown={()=> handleBarae(barae)} key={barae.cd}>
                                 {
                                     barae.cd !== "NONE" &&
                                     <i>{index}</i>
@@ -84,17 +84,17 @@ const BaraeMenu = ({isCreate, activeBarae}) => {
                     }
                     {
                         NAMHAE_BARAE_SECOND_LIST.map((barae,index)=>(
-                            <button type="button" className="btn-tab" onClick={()=> handleBarae(barae)}><i>{index+1}</i>{barae.nm}</button>
+                            <button type="button" className="btn-tab" onPointerDown={()=> handleBarae(barae)}><i>{index+1}</i>{barae.nm}</button>
                         ))
                     }
                     {
                         NAMHAE_BARAE_THREE_LIST.map((barae,index)=>(
-                            <button type="button" className="btn-tab" onClick={()=> handleBarae(barae)}><i>{index+1}</i>{barae.nm}</button>
+                            <button type="button" className="btn-tab" onPointerDown={()=> handleBarae(barae)}><i>{index+1}</i>{barae.nm}</button>
                         ))
                     }
                 </div>
             </div>
-            <button className="btn-tab-next" onClick={handleNext} disabled={currentIndex === 2}></button>
+            <button className="btn-tab-next" onPointerDown={handleNext} disabled={currentIndex === 2}></button>
         </div>
     )
 

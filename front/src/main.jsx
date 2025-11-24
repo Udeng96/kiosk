@@ -22,7 +22,7 @@ const queryClient = new QueryClient();
 ReactDOM.createRoot(document.getElementById('root')).render(
     <QueryClientProvider client={queryClient}>
             <IdleWatcher
-                timeout={60000} // 10초
+                timeout={60000} // 1분
             />
             <Router/>
     </QueryClientProvider>

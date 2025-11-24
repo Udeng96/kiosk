@@ -6,13 +6,11 @@ import {useKiosk} from "@/store/kioskZustand.jsx";
 
 const StartNavi = ({isCreate}) => {
 
-    const {activeCreatePage, setActiveCreatePage} = useCreate(useShallow((state)=> ({
-        activeCreatePage: state.activePage,
+    const {setActiveCreatePage} = useCreate(useShallow((state)=> ({
         setActiveCreatePage: state.actions.setActivePage
     })))
 
-    const {activePage, setActivePage} = useKiosk(useShallow((state)=> ({
-        activePage : state.activePage,
+    const { setActivePage} = useKiosk(useShallow((state)=> ({
         setActivePage : state.actions.setActivePage
     })))
 
@@ -26,8 +24,7 @@ const StartNavi = ({isCreate}) => {
     }
 
     return(
-        <div className="intro-frame" onClick={()=>handleBtn()}>
-            <p>관광지 정보<br/>바로가기</p>
+        <div className="intro-frame" onPointerDown={()=>handleBtn()}>
         </div>
     )
 

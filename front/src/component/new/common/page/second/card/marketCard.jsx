@@ -16,7 +16,7 @@ const MarketCard = ({isShow}) => {
                 </div>
                 <div className="modal__footer">
                     <button type="button" className="btn-icon btn-icon--red btn-close modal-close"
-                            onClick={() => setActiveCreateModal(WEB_TYPE.NONE)}>나가기
+                            onPointerDown={() => setActiveCreateModal(WEB_TYPE.NONE)}>나가기
                     </button>
                 </div>
             </div>

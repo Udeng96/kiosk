@@ -26,7 +26,7 @@ const TourFoot = ({isCreate}) => {
     }
     return(
         <div className="view__footer">
-            <button type="button" onClick={()=>handleClsBtn()}
+            <button type="button" onPointerDown={()=>handleClsBtn()}
                     className="btn-icon btn-icon--red btn-close modal-close black">나가기
             </button>
         </div>

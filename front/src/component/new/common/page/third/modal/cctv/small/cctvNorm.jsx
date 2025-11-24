@@ -38,6 +38,7 @@ const CctvNorm = ({isCreate}) => {
         }
     }
 
+
     return(
         <>
             {
@@ -46,11 +47,11 @@ const CctvNorm = ({isCreate}) => {
                         <div className="cctv__in">
                             <div className={"cctv__title"}>{activeTourPlace? activeTourPlace.title : '-'}</div>
                             {
-                                selectTourPlace.mgtno !== '' &&
+                                activeTourPlace.mgtno !== '' &&
                                 <CctvWidePlayer activeTourPlace={activeTourPlace}/>
                             }
                         </div>
-                        <button type="button" className="btn-icon btn-icon--red black btn-close modal-close" onClick={()=> handleClsModal()}>나가기</button>
+                        <button type="button" className="btn-icon btn-icon--red black btn-close modal-close" onPointerDown={()=> handleClsModal()}>나가기</button>
                     </div>
                 </div>
             }
@@ -61,7 +62,7 @@ const CctvNorm = ({isCreate}) => {
                         <div className="cctv__in nothing">
                             <p>현재 영상이 준비중입니다.</p>
                         </div>
-                        <button type="button" className="btn-icon btn-icon--red black btn-close modal-close" onClick={()=> handleClsModal()}>나가기</button>
+                        <button type="button" className="btn-icon btn-icon--red black btn-close modal-close" onPointerDown={()=> handleClsModal()}>나가기</button>
                     </div>
                 </div>
             }
