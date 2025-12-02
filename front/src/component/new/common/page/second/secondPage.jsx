@@ -56,8 +56,9 @@ const SecondPage = ({isCreate}) => {
                         <li className="kiosk__item card-05" onPointerDown={() => handleCard(WEB_TYPE.NAMHAERO)}></li>
                     </div>
                     <div>
-                        <li className="kiosk__item card-04" onPointerDown={() => handleCard(WEB_TYPE.MALL)}></li>
-                        <li className="kiosk__item card-06" onPointerDown={() => handleBtn()}></li>
+                        <li className="kiosk__item card-04" onPointerDown={() => handleCard(WEB_TYPE.NANGMAN)}></li>
+                        <li className="kiosk__item card-06" onPointerDown={() => handleCard(WEB_TYPE.MALL)}></li>
+                        <li className="kiosk__item card-07" onPointerDown={() => handleBtn()}></li>
                     </div>
                 </ul>
             </div>

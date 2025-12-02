@@ -43,7 +43,7 @@ const   MenuBtn = ({isCreate, isShow}) => {
 
     return(
         <div className={`menu-toggle ${isShow ? 'active' : ''}`}>
-s            <button type="button"
+            <button type="button"
                     className={`btn-menu btn-menu--tour ${activeMenu === MENU_TYPE.TOUR ? 'active' : ''}`}
                     onPointerDown={() => handleMenu(MENU_TYPE.TOUR)}>관광지</button>
             <button type="button"
