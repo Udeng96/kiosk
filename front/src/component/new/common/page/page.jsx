@@ -47,10 +47,7 @@ const Page = ({isCreate}) => {
                     <SecondPage isCreate={isCreate}/>
                 </div>
             </div>
-            {
-                page !== PAGE_TYPE.THIRD &&
-                <ArrowBtn isCreate={isCreate}/>
-            }
+            <ArrowBtn/>
         </section>
     )
 }

@@ -91,22 +91,7 @@
 .standby .kiosk-frame .card-03:active {
   background-image: url("../../../image/img/standby/img_card03_focus_1280x808.png");
 }
-.standby .kiosk-frame .card-04 {
-  grid-row: 1/2;
-  grid-column: 3/4;
-  background: url("../../../image/img/standby/img_card04_normal_1280x808.png") no-repeat center/100%;
-}
-.standby .kiosk-frame .card-04:active {
-  background-image: url("../../../image/img/standby/img_card04_focus_1280x808.png");
-}
-.standby .kiosk-frame .card-05 {
-  grid-row: 2/4;
-  grid-column: 2/4;
-  background: url("../../../image/img/standby/img_card05_normal_1280x808.png") no-repeat center/100%;
-}
-.standby .kiosk-frame .card-05:active {
-  background-image: url("../../../image/img/standby/img_card05_focus_1280x808.png");
-}
+
 .standby .swiper {
   width: 640px;
   height: 542px;
@@ -169,7 +154,7 @@
 .standby .btn-back {
   position: absolute;
   left: 128px;
-  bottom: 80px;
+  /*bottom: 80px;*/
   width: max-content;
   z-index: 1;
   transition: visibility 500ms, opacity 500ms;

@@ -224,12 +224,26 @@ main {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+.btn-icon.video-btn{
+  border: unset;
+  width: 270px;
+  height: 270px;
+  box-shadow: unset;
+  background: url("../../../assets/image/img/standby/img_floating_normal_270x270.png");
+
+}
+
+.btn-icon.video-btn:active{
+  background: url("../../../assets/image/img/standby/img_floating_focus_270x270.png");
+}
+
 .iframe-scroll-wrapper .modal__footer .btn-icon{
   padding: 32px !important;
 }
 .iframe-scroll-wrapper .modal__footer .page.btn-icon::after{
   display: none;
 }
+
 
 .iframe-scroll-wrapper .modal__footer .page.btn-icon.btn-next::before{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50' fill='none'%3E%3Cpath d='M38.377 24.9893L9 24.9893' stroke='%234C57F5' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M28.4062 37.5811L40.9964 24.9909L28.4062 12.4007' stroke='%234C57F5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");

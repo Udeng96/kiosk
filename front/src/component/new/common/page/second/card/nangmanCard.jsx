@@ -24,16 +24,6 @@ const NangmanCard = ({isCreate, isShow}) => {
         }
     }
 
-    const sendScrollMessage = (distance) => {
-        iframeRef.current?.contentWindow?.postMessage(
-            {type: "scrollDown", value: distance},
-            "*" // 보안을 위해 실제 origin 예: "https://www.visitnamhae.go.kr" 로 바꾸세요
-        );
-    };
-
-    const handlePrev = () => sendScrollMessage(1900); // 아래로 1900px
-    const handleNext = () => sendScrollMessage(-1900); // 위로 1900px
-
     return (
         <div id="modal-tourplatform" className={`modal ${isShow ? '' : 'hidden'}`}>
             <div className="dimmed"></div>
@@ -52,12 +42,6 @@ const NangmanCard = ({isCreate, isShow}) => {
                     <div className="modal__footer">
                         <button type="button" className="btn-icon btn-icon--red btn-close"
                                 onPointerDown={() => handleClsBtn(WEB_TYPE.NONE)}></button>
-                        {/*<div>*/}
-                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-next "*/}
-                        {/*            onPointerDown={() => handleNext()}></button>*/}
-                        {/*    <button type="button" className="btn-icon btn-icon--blue page btn-prev "*/}
-                        {/*            onPointerDown={() => handlePrev()}></button>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
 

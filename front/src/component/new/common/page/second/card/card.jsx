@@ -9,6 +9,7 @@ import NamhaeroCard from "@/component/new/common/page/second/card/namhaeroCard.j
 import VisitCard from "@/component/new/common/page/second/card/visitCard.jsx";
 import MarketCard from "@/component/new/common/page/second/card/marketCard.jsx";
 import MallCard from "@/component/new/common/page/second/card/mallCard.jsx";
+import ArrowBtn from "@/component/new/common/btn/start/arrowBtn.jsx";
 
 const Card = ({isCreate}) => {
 
