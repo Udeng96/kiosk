@@ -53,11 +53,11 @@ const SecondPage = ({isCreate}) => {
                     </div>
                     <div>
                         <li className="kiosk__item card-03" onPointerDown={() => handleCard(WEB_TYPE.VISIT)}></li>
-                        <li className="kiosk__item card-05" onPointerDown={() => handleCard(WEB_TYPE.NAMHAERO)}></li>
+                        <li className="kiosk__item card-05" onPointerDown={() => handleCard(WEB_TYPE.NAMHAEROFOOD)}></li>
                     </div>
                     <div>
-                        <li className="kiosk__item card-04" onPointerDown={() => handleCard(WEB_TYPE.NANGMAN)}></li>
-                        <li className="kiosk__item card-06" onPointerDown={() => handleCard(WEB_TYPE.MALL)}></li>
+                        <li className="kiosk__item card-04"></li>
+                        <li className="kiosk__item card-06"></li>
                         <li className="kiosk__item card-07" onPointerDown={() => handleBtn()}></li>
                     </div>
                 </ul>

@@ -24,8 +24,6 @@ export const useCreate = create((set)=> ({
     selectModalVillage : FF_VILLAGE_LIST[0],
     selectModalChangseng : CHANGSENG_TYPE.FIRST,
 
-
-
     activeStandby : "FIRST",
     activeMenu : "NONE",
     activeMainMenu : "TOUR",
