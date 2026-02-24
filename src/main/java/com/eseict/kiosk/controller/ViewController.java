@@ -21,4 +21,9 @@ public class ViewController {
     public String create(){
         return "index";
     }
+
+    @RequestMapping("/manage")
+    public String manage(){
+        return "index";
+    }
 }

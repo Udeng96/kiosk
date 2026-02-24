@@ -22,7 +22,6 @@ const Namhae = () => {
         <div className="wrap">
             <Header/>
             <main>
-
                 <Page isCreate={true}/>
                 <Card isCreate={true}/>
                 <TourModal isCreate={true}/>

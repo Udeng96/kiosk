@@ -40,8 +40,7 @@ const NangmanCard = ({isCreate, isShow}) => {
                         title="낭만남해 홈페이지">
                     </iframe>
                     <div className="modal__footer">
-                        <button type="button" className="btn-icon btn-icon--red btn-close"
-                                onPointerDown={() => handleClsBtn(WEB_TYPE.NONE)}></button>
+                        <button type="button" className="btn-icon btn-icon--red btn-close"></button>
                     </div>
                 </div>
 

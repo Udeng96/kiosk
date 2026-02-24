@@ -43,6 +43,9 @@ header .wearther__icon.cloud-rain {
 header .wearther__icon.cloud-snow {
   background-image: url("../../image/img/header/img_cloud-snow-05_dark_32x32.svg");
 }
+header .wearther__icon.rain {
+  background-image: url("../../image/img/header/img_cloud-rain-05_dark_32x32.svg");
+}
 header .wearther__icon.rain-snow {
   background-image: url("../../image/img/header/img_rain-snow-05_dark_32x32.svg");
 }

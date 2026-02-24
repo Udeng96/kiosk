@@ -52,8 +52,7 @@ const MallCard = ({isCreate, isShow}) => {
                         title="구석구석 남해 홈페이지">
                     </iframe>
                     <div className="modal__footer">
-                        <button type="button" className="btn-icon btn-icon--red btn-close"
-                                onPointerDown={() => handleClsBtn(WEB_TYPE.NONE)}></button>
+                        <button type="button" className="btn-icon btn-icon--red btn-close"></button>
                         {/*<div>*/}
                         {/*    <button type="button" className="btn-icon btn-icon--blue page btn-next "*/}
                         {/*            onPointerDown={() => handleNext()}></button>*/}
