@@ -1,0 +1,26 @@
+{
+  "name": "front",
+  "homepage": "kiosk",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_EVN=development vite",
+    "build": "NODE_ENV=production && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.83.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "axios": "^1.11.0",
+    "eslint": "^9.31.0",
+    "moment": "^2.30.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.7.1",
+    "router": "^2.2.0",
+    "swiper": "^11.2.10",
+    "vite": "^5.2.10",
+    "zustand": "^5.0.6"
+  }
+}

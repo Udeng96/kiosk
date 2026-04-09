@@ -1,0 +1,40 @@
+@use 'sass:map';
+
+$font-path: '../font/';
+
+$font-weight: (
+  Thin: 100,
+  ExtraLight: 200,
+  Light: 300,
+  Regular: 400,
+  Normal: 400,
+  Medium: 500,
+  SemiBold: 600,
+  Bold: 700,
+  ExtraBold: 800,
+  Black: 900,
+);
+
+$font-family: (
+  'Pretendard': (Thin, ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold, Black),
+  // 'MuseumClassic': (Light, Medium, Bold, ),
+);
+
+@each $name, $weights in $font-family {
+  @each $weight in $weights {
+    @if map.has-key($font-weight, $weight) {
+      $weight-value: map.get($font-weight, $weight);
+      $base-file: $font-path + $name + '-' + $weight;
+
+      @font-face {
+        font-family: $name;
+        src: url(#{$base-file}.ttf) format('truetype');
+        // src: url(#{$base-file}.otf) format('opentype'),
+        // url(#{$base-file}.ttf) format('truetype');
+        font-weight: $weight-value;
+        font-style: normal;
+        font-display: swap;
+      }
+    }
+  }
+}
