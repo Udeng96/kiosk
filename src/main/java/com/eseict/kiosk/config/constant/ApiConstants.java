@@ -9,7 +9,7 @@ public class ApiConstants {
     public static final String HOME_PATH = SystemProperties.getProperty("KIOSK_HOME");
     public static final String IS_DEV = SystemProperties.getProperty("IS_DEV");
 
-    public static final String KIOSK_IP_PORT = "http://172.16.8.42:22511";
+    public static final String KIOSK_IP_PORT = "http://YOUR_SERVER_IP:22511";
 
     // 메시지 교환 방식
     public static class MSG_EXCH_PTRN {
